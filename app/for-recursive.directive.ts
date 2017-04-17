@@ -1,4 +1,9 @@
-import { Directive, Input } from '@angular/core';
+import { 
+    Directive, 
+    EmbeddedViewRef,
+    Input,
+    TemplateRef, 
+    ViewContainerRef } from '@angular/core';
 import { RecursiveModel } from './RecursiveModel';
 
 /**
@@ -13,6 +18,14 @@ export class ForRecursiveDirective {
 
     // List of input data transformed to the model with level symbol
     private collection: RecursiveModel<any>[];
+
+    /**
+     * Inits the directive
+     * @param template - Template reference that used in DOM manipulations
+     */
+    constructor(private template: TemplateRef<any>,
+                private viewContainer: ViewContainerRef) {
+    }
 
     /**
      * Property differ setter to detect changes in the model recursion property name
@@ -36,11 +49,10 @@ export class ForRecursiveDirective {
     set forRecursiveOf(coll: any[]) {
         this.collection = [];
         this.flattenData(coll);
-        console.log(this.collection)
     }
 
     /**
-    * Converts recursive items to the single list
+    * Converts recursive items to the single list and renders it
     * 
     * @param nodes - List of items need be included to the tree on the specific level
     * @param level - Sets the level of items passed as the first parameter
@@ -49,6 +61,9 @@ export class ForRecursiveDirective {
         nodes.forEach((element: any, index: number, array: any[]) => {
             let item = new RecursiveModel(element, level);
             this.collection.push(item);
+            const view = this.viewContainer.createEmbeddedView(this.template);
+            view.context.$implicit = item;
+
             if (element[this.forRecursiveProperty] != null && element[this.forRecursiveProperty] != undefined) {
                 this.flattenData(element[this.forRecursiveProperty], level + 1);
             }
