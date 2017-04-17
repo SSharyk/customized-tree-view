@@ -1,0 +1,4 @@
+Tree: 
+<div *forRecursive="let item of items; property:'Children'" class="lvl-{{item.Level}}">
+    <rec-item [item]="item.Entity"> Rec-item here </rec-item>
+</div>
