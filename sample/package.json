@@ -1,0 +1,48 @@
+{
+  "name": "customized-tree-view-sample",
+  "version": "0.1.0",
+  "description": "Sample that uses directive for recursive rendering",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SSharyk/customized-tree-view.git"
+  },
+  "keywords": [
+    "ForRecursive",
+    "sample"
+  ],
+  "author": "SSharyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SSharyk/customized-tree-view/issues"
+  },
+  "homepage": "https://github.com/SSharyk/customized-tree-view#readme",
+  "dependencies": {
+    "@angular/common": "~4.0.0",
+    "@angular/compiler": "~4.0.0",
+    "@angular/core": "~4.0.0",
+    "@angular/forms": "~4.0.0",
+    "@angular/platform-browser-dynamic": "~4.0.0",
+    "angular-in-memory-web-api": "~0.3.0",
+    "systemjs": "0.19.40",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.8.4",
+    "customized-tree-view": "~0.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.46",
+    "concurrently": "^3.2.0",
+    "lite-server": "^2.2.2",
+    "rimraf": "^2.5.4",
+    "typescript": "~2.1.0",
+    "webpack": "^2.4.1"
+  }
+}

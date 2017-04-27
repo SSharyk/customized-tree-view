@@ -1,8 +1,10 @@
 # TreeView Angular structural directive 
 ## Summary
-_Version_: 0.1.0
+_Version_: 0.1.1
 
 _Description_: This is structural Angular directive that gets you syntax sugar to render your model items as a recursive view using your own styles template.
+
+_Usage_: For rendering templates in tree view.
 
 ## How to use
 #### Install
@@ -82,4 +84,5 @@ export class RecursiveItemComponent {
 ```
 
 Note:
-> The directive should be declared in the `declaration` section of the module.
+> The directive should be imported in the module and declared in the `declaration` section of `NgModule` annotation
+> "noImplicitAny" in the project's tsconfig.json file should be either not declared (default value) or set to `false`

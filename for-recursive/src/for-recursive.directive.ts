@@ -4,13 +4,19 @@ import {
     Input,
     TemplateRef, 
     ViewContainerRef } from '@angular/core';
-import { RecursiveModel } from './RecursiveModel';
+
+export class RecursiveModel<T> {
+    constructor(public Entity: T, public Level: number) {
+    }
+}
+
 
 /**
  * Structural directive that passes through the collection and renders it as a tree
  */
 @Directive({
-    selector: '[forRecursive]'
+    selector: '[forRecursive]',
+    inputs: ['forRecursiveOf', 'forRecursiveProperty']
 })
 export class ForRecursiveDirective {
     // Model recursion property name

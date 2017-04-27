@@ -1,4 +1,7 @@
 **/*.log
-app/**/*.js
-app/**/*.map
+**/*.js
+**/*.map
 node_modules
+src/*.d.ts
+**/typings/**/*.* 
+!**/typings/index.d.ts

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemModel } from './Tree/ItemModel';
-
+import { RecursiveItemComponent } from './Tree/recursive-item.component';
+import { ForRecursiveDirective, RecursiveModel } from 'customized-tree-view';
      
 @Component({
     selector: 'app',

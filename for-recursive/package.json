@@ -1,0 +1,42 @@
+{
+    "name": "customized-tree-view",
+    "description": "Structural Angular directive for rendering items as tree nodes",
+    "version": "0.1.2",
+    "main": "src/for-recursive.directive.js",
+    "typings": "src/for-recursive.directive.d.ts",
+    "scripts": {
+        "build": "typings install && tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SSharyk/customized-tree-view.git"
+    },
+    "keywords": [
+        "angular",
+        "directive",
+        "tree",
+        "view",
+        "template",
+        "rendering"
+    ],
+    "author": "SSharyk",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/SSharyk/customized-tree-view/issues"
+    },
+    "homepage": "https://github.com/SSharyk/customized-tree-view#readme",
+    "devDependencies": {
+        "@angular/common": "^2.0.0",
+        "@angular/core": "^2.0.0",
+        "es6-shim": "^0.35.0",
+        "reflect-metadata": "^0.1.2",
+        "rxjs": "^5.0.0-beta.12",
+        "tslint": "^3.9.0",
+        "typescript": "^1.8.10",
+        "typings": "^1.0.4",
+        "zone.js": "^0.6.21"
+    }, 
+    "peerDependencies": {
+        "zone.js": "^0.8.5"
+    }
+}
